@@ -1,9 +1,10 @@
-# Viseron App
-
+# Viseron Mobile & Android TV App
 
 ![Viseron Logo](assets/logo/viseron-logo.svg)
 
 A Flutter application for Android TV and mobile devices that connects to your Viseron NVR instance to view camera feeds and live streams.
+
+**Note:** This is an unofficial community app for Viseron. For the main Viseron NVR project, visit [roflcoopter/viseron](https://github.com/roflcoopter/viseron).
 
 ## Features
 
@@ -27,7 +28,7 @@ A Flutter application for Android TV and mobile devices that connects to your Vi
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
+git clone git@github.com:mani-repos-link/viseron-app.git
 cd viseron
 ```
 
@@ -262,69 +263,88 @@ flutter run -d TV_IP_ADDRESS:5555
 # Press 'R' in terminal to hot restart
 ```
 
-### Code Structure
 
-```
-lib/
-├── core/
-│   └── exceptions.dart           # Custom exception classes
-├── models/
-│   ├── camera.dart               # Camera data model
-│   └── connection_settings.dart  # Connection settings model
-├── providers/
-│   └── app_state.dart            # Global app state management
-├── screens/
-│   ├── login_screen.dart         # Platform detection router
-│   ├── login_screen_mobile.dart  # Mobile touch interface
-│   ├── login_screen_tv.dart      # TV D-pad interface
-│   ├── home_screen.dart          # Camera grid home
-│   ├── grid_view_screen.dart     # Multi-camera live view
-│   └── player_screen.dart        # Full-screen player
-├── services/
-│   ├── viseron_api.dart          # API client
-│   └── storage_service.dart      # SharedPreferences wrapper
-├── widgets/
-│   ├── camera_card.dart          # Camera thumbnail widget
-│   └── live_camera_view.dart     # Live snapshot view
-└── main.dart                     # App entry point
-```
 
-## Contributing
+## Community & Contributing
 
-Contributions are welcome! Here's how you can help:
+This is a **community project** and we welcome contributions from everyone! Whether you're fixing bugs, adding features, improving documentation, or helping other users.
 
-### Reporting Issues
+### How to Contribute
 
-- Use GitHub Issues to report bugs
-- Include steps to reproduce
-- Mention your device type (mobile/TV) and Android version
-- Include relevant logs
+See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines on:
+- Setting up development environment
+- Reporting bugs and requesting features
+- Submitting pull requests
+- Code style and standards
+- Testing requirements
 
-### Pull Requests
+### Areas That Need Help
+
+We especially welcome contributions for:
+- Video player improvements
+- Settings screen
+- Camera grouping/organization
+- Localization/translations
+- iOS support
+- Documentation and tutorials
+
+### Code of Conduct
+
+This project follows a [Code of Conduct](CODE_OF_CONDUCT.md). By participating, you agree to uphold this code.
+
+### Quick Start for Contributors
 
 1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Make your changes
-4. Test on both mobile and TV if possible
-5. Commit your changes (`git commit -m 'Add amazing feature'`)
-6. Push to the branch (`git push origin feature/amazing-feature`)
-7. Open a Pull Request
+2. Clone your fork: `git clone https://github.com/YOUR_USERNAME/viseron-app.git`
+3. Install dependencies: `flutter pub get`
+4. Run the app: `flutter run`
+5. Make changes and test
+6. Submit a pull request
 
-### Development Guidelines
+See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed instructions.
 
-- Follow Flutter/Dart style guidelines
-- Test on both mobile and Android TV
-- Ensure TV navigation works with D-pad
-- Keep mobile touch interface functional
-- Add comments for complex logic
-- Update README if adding new features
+## Viseron Community
+
+This app is designed to work with [Viseron](https://github.com/roflcoopter/viseron), an open-source NVR with support for AI object detection.
+
+### Related Projects
+- **Viseron NVR**: [roflcoopter/viseron](https://github.com/roflcoopter/viseron) - The main Viseron project
+- **Viseron Docs**: [viseron.netlify.app](https://viseron.netlify.app/) - Official documentation
+
+### Community Links
+- **Viseron Discord**: Join the community for support and discussions
+- **Report Issues**: Use GitHub Issues for bugs and feature requests
+- **Discussions**: Use GitHub Discussions for questions and ideas
+
+## Support
+
+- **App Issues**: Open an issue on this repository
+- **Viseron Server Issues**: Refer to the main Viseron project
+- **General Help**: Join the Viseron community Discord
+
+## Roadmap
+
+Planned features and improvements:
+- [ ] Enhanced video player with HLS streaming
+- [ ] Settings screen for customization
+- [ ] Camera grouping and organization
+- [ ] Multi-language support
+- [ ] iOS version
+- [ ] Motion detection notifications
+- [ ] Recording playback
+
+See [Issues](../../issues) for more details and to vote on features.
 
 ## License
 
-MIT License - see LICENSE file for details
+MIT License - see [LICENSE](LICENSE) file for details
+
+This project is not affiliated with or endorsed by the official Viseron project.
 
 ## Acknowledgments
 
 - Built with Flutter for cross-platform support
-- Uses the dpad package for Android TV navigation
-- Designed for Viseron NVR system
+- Uses the [dpad package](https://pub.dev/packages/dpad) for Android TV navigation
+- Designed for the [Viseron NVR system](https://github.com/roflcoopter/viseron)
+- Community icon and assets by Viseron project
+- Thanks to all contributors!
