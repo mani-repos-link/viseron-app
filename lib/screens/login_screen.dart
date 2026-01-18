@@ -17,7 +17,6 @@ class LoginScreen extends StatelessWidget {
     final height = size.height;
 
     // Android TV typically has width > 1000 or aspect ratio close to 16:9 with large screen
-    final aspectRatio = width / height;
     final isLandscape = width > height;
     final isLargeScreen = width > 1000 || height > 600;
 

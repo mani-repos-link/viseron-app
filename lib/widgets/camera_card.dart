@@ -64,6 +64,7 @@ class _CameraCardState extends State<CameraCard> {
       }
     } catch (e) {
       if (_image == null) {
+        // TODO: remove print
         print('Exception fetching snapshot for ${widget.camera.name}: $e');
       }
     }

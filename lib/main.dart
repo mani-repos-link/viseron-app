@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:wakelock_plus/wakelock_plus.dart';
 import 'package:dpad/dpad.dart';
 import 'providers/app_state.dart';
 import 'screens/login_screen.dart';
@@ -49,6 +50,9 @@ class _AuthWrapperState extends State<AuthWrapper> {
   @override
   void initState() {
     super.initState();
+    // Keep the screen on for TV monitoring
+    WakelockPlus.enable();
+    
     WidgetsBinding.instance.addPostFrameCallback((_) {
       context.read<AppState>().loadSettingsAndConnect();
     });

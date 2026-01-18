@@ -44,4 +44,16 @@ app.*.map.json
 /android/app/profile
 /android/app/release
 flutter/
-.claude/
+
+# Signing keys - NEVER commit these!
+*.jks
+*.keystore
+android/key.properties
+key.properties
+
+# Personal Play Store files
+setup_release_signing.sh
+take_screenshots.sh
+
+# Screenshots (too large for git)
+screenshots/

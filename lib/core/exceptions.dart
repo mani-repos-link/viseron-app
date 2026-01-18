@@ -9,13 +9,13 @@ class ViseronException implements Exception {
 }
 
 class NetworkException extends ViseronException {
-  NetworkException(String message) : super(message);
+  NetworkException(super.message);
 }
 
 class AuthException extends ViseronException {
-  AuthException(String message, [int? statusCode]) : super(message, statusCode);
+  AuthException(super.message, [super.statusCode]);
 }
 
 class ServerException extends ViseronException {
-  ServerException(String message, [int? statusCode]) : super(message, statusCode);
+  ServerException(super.message, [super.statusCode]);
 }
